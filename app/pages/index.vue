@@ -5,6 +5,7 @@ import { useToggle } from "@vueuse/shared";
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
+const value1 = ref();
 
 const changePrimaryColor = (base: string) => {
     const MyPreset = updatePreset({

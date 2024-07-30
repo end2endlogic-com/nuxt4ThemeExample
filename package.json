@@ -9,18 +9,26 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@primevue/nuxt-module": "^4.0.2",
-    "@unocss/nuxt": "^0.61.6",
-    "nuxt": "^3.12.1",
-    "unocss": "^0.61.6",
-    "@iconify-json/carbon": "^1.1.36"
+    "@nuxt/devtools": "latest"
   },
   "dependencies": {
-    "@primevue/themes": "^4.0.2",
+    "@formkit/nuxt": "1.6.5",
+    "@iconify-json/carbon": "^1.1.36",
+    "@nuxtjs/i18n": "8.3.1",
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
+    "@pinia/nuxt": "^0.5.1",
+    "@primevue/nuxt-module": "4.0.3",
+    "@primevue/themes": "4.0.3",
+    "@sfxcode/formkit-primevue": "^2.3.10",
+    "@unocss/nuxt": "^0.61.6",
+    "@vueuse/nuxt": "^10.11.0",
+    "nuxt": "^3.12.1",
     "primeicons": "^7.0.0",
-    "primevue": "^4.0.2",
-    "@vueuse/nuxt": "^10.11.0"
+    "primevue": "4.0.3",
+    "sass": "1.76.0",
+    "typescript": "^5.5.3",
+    "unocss": "^0.61.6",
+    "vite": "^5.0.0"
   },
   "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
 }

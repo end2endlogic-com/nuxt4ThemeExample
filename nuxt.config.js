@@ -36,12 +36,35 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  css: ["primeicons/primeicons.css"],
+  css: ["primeicons/primeicons.css",
+    "@sfxcode/formkit-primevue/dist/sass/formkit-primevue.scss"],
 
-  modules: ["@unocss/nuxt", "@vueuse/nuxt", "@primevue/nuxt-module"],
+  modules: [
+    "@unocss/nuxt",
+    "@vueuse/nuxt",
+    "@primevue/nuxt-module",
+    "@pinia/nuxt",
+    "@pinia-plugin-persistedstate/nuxt",
+    "@nuxtjs/i18n",
+    "@formkit/nuxt",
+  ],
 
   unocss: {
     nuxtLayers: true,
+  },
+  formkit: {
+    autoImport: true
+  },
+  i18n: {
+    lazy: true,
+    langDir: "locales",
+    defaultLocale: "en",
+    strategy: "no_prefix",
+    locales: [
+      { code: "en", file: "en.json", name: "English" },
+      { code: "de", file: "de.json", name: "German" },
+    ],
+    vueI18n: "./vue-i18n.options.ts",
   },
 
   primevue: {
@@ -57,5 +80,12 @@ export default defineNuxtConfig({
     autoImport: false,
   },
 
-  compatibilityDate: "2024-07-21",
+  build: {
+    transpile: ['formkit-primevue'],
+  },
+
+  sourcemap: {
+    client: false,
+    server: false,
+  },
 });
