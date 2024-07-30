@@ -52,10 +52,10 @@ function setDarkOrLightMode() {
 </script>
 
 <template>
-    <Toolbar style="border: none">
+    <Toolbar>
         <template #end>
             <div class="px-40">
-                <Button icon="pi pi-palette" @click="toggleColorPopover" />
+                <Button icon="pi pi-palette" text @click="toggleColorPopover" />
                 <Popover ref="colorPopover" append-to="body">
                     <h6>Primary Color</h6>
                     <div class="flex">
@@ -133,6 +133,8 @@ function setDarkOrLightMode() {
                             class="bg-amber-500 mr-3 cursor-pointer"
                             @click="changePrimaryColor('amber')"
                         />
+                    </div>
+                    <div class="flex mt-2">
                         <div
                             style="
                                 width: 2rem;
@@ -142,11 +144,39 @@ function setDarkOrLightMode() {
                             class="bg-red-500 mr-3 cursor-pointer"
                             @click="changePrimaryColor('red')"
                         />
+                        <div
+                            style="
+                                width: 2rem;
+                                height: 2rem;
+                                border-radius: 6px;
+                            "
+                            class="bg-slate-500 mr-3 cursor-pointer"
+                            @click="changePrimaryColor('slate')"
+                        />
+                        <div
+                            style="
+                                width: 2rem;
+                                height: 2rem;
+                                border-radius: 6px;
+                            "
+                            class="bg-zinc-500 mr-3 cursor-pointer"
+                            @click="changePrimaryColor('zinc')"
+                        />
+                        <div
+                            style="
+                                width: 2rem;
+                                height: 2rem;
+                                border-radius: 6px;
+                            "
+                            class="bg-stone-500 mr-3 cursor-pointer"
+                            @click="changePrimaryColor('stone')"
+                        />
                     </div>
                 </Popover>
                 <Button
                     class="p-link layout-topbar-button mx-2"
                     @click="setDarkOrLightMode()"
+                    text
                 >
                     <i
                         inline-block
